@@ -41,6 +41,8 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
+//app.useStaticFiles(); serve para permitir carregar as fotos na pasta wwwroot para expor na web
+app.UseStaticFiles();
 app.UseAuthorization();
 
 app.MapControllers();
