@@ -21,10 +21,10 @@ public class BuggyController : BaseApiController
 
         if (thing == null)
         {
-            return NotFount(new ApiResponse(404));
+            return NotFound(new ApiResponse(404));
         }
 
-        return OK();
+        return Ok();
     }
     
     [HttpGet("servererror")]
@@ -35,14 +35,14 @@ public class BuggyController : BaseApiController
 
         var thingToReturn = thing.ToString();
 
-        return OK();
+        return Ok();
     }
     
     [HttpGet("badrequest")]
 
     public ActionResult GetBadRequest()
     {
-        return Badrequest(new ApiResponse(400));
+        return BadRequest(new ApiResponse(400));
     }
     
     
@@ -50,6 +50,6 @@ public class BuggyController : BaseApiController
 
     public ActionResult GetNotFoundRequest(int id)
     {
-        return OK();
+        return Ok();
     }
 }
