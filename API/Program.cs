@@ -37,6 +37,9 @@ app.UseSwaggerUI();
 
 //app.useStaticFiles(); serve para permitir carregar as fotos na pasta wwwroot para expor na web
 app.UseStaticFiles();
+
+app.UseCors("CorsPolicy");
+
 app.UseAuthorization();
 
 app.MapControllers();
